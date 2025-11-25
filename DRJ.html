@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruvrajsinh Dodiya | Portfolio</title>
+    
+    <!-- FONT AWESOME (Fixed Link) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* ========================================
+           CORE VARIABLES & THEME SETUP 
+           ========================================
+        */
+        :root {
+            --bg-dark: #050505;
+            --neon-blue: #00f3ff;
+            --neon-purple: #bc13fe;
+            --neon-green: #0aff0a;
+            --neon-yellow: #f1c40f;
+            --text-main: #e0e0e0;
+            --font-display: 'Orbitron', sans-serif;
+            --font-body: 'Rajdhani', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none !important; }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            font-size: 18px;
+            opacity: 0;
+            animation: pageFadeIn 0.5s forwards;
+        }
+
+        @keyframes pageFadeIn { to { opacity: 1; } }
+
+        /* --- CUSTOM CURSOR --- */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--neon-green);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+            mix-blend-mode: difference;
+        }
+        .cursor.hovered {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(10, 255, 10, 0.1);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        /* --- SCROLLBAR --- */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--neon-purple); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--neon-blue); }
+
+        /* --- ANIMATIONS --- */
+        @keyframes glitch {
+            0% { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); }
+            20% { clip-path: inset(92% 0 1% 0); transform: translate(0); }
+            40% { clip-path: inset(43% 0 1% 0); transform: translate(2px, -2px); }
+            60% { clip-path: inset(25% 0 58% 0); transform: translate(2px, 2px); }
+            80% { clip-path: inset(54% 0 7% 0); transform: translate(-1px, 1px); }
+            100% { clip-path: inset(58% 0 43% 0); transform: translate(0); }
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 5px var(--neon-blue); border-color: var(--neon-blue); }
+            50% { box-shadow: 0 0 20px var(--neon-purple); border-color: var(--neon-purple); }
+            100% { box-shadow: 0 0 5px var(--neon-blue); border-color: var(--neon-blue); }
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* --- LAYOUT --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+        
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(5, 5, 5, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            position: relative;
+            transition: 0.3s;
+            padding: 5px 10px;
+            cursor: none;
+        }
+        nav a:hover, nav a.active { color: var(--neon-green); text-shadow: 0 0 10px var(--neon-green); }
+        nav a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px;
+            background: var(--neon-green); transition: 0.3s;
+        }
+        nav a:hover::after { width: 100%; }
+
+        /* SECTIONS */
+        section {
+            min-height: 100vh;
+            padding-top: 120px;
+            position: relative;
+            display: none; /* Default hidden */
+        }
+        section.active { 
+            display: block; 
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            min-height: 100vh;
+            padding-top: 0;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #000 70%);
+        }
+
+        .photo-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 2rem;
+            z-index: 2;
+        }
+        
+        .photo-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--neon-blue);
+            box-shadow: 0 0 30px var(--neon-blue);
+            position: relative;
+            animation: pulse-border 4s infinite;
+            background: #000;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.1) brightness(1.1);
+        }
+
+        .orbit-ring {
+            position: absolute;
+            top: -20px; left: -20px; right: -20px; bottom: -20px;
+            border: 2px dashed var(--neon-purple);
+            border-radius: 50%;
+            animation: spin 10s linear infinite;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            position: relative;
+            color: #fff;
+            text-shadow: 3px 3px 0px var(--neon-purple);
+            min-height: 1.2em; 
+            cursor: default;
+        }
+        
+        /* Glitch Text Effect */
+        .hero h1::before {
+            content: attr(data-text);
+            position: absolute; left: -2px; text-shadow: 1px 0 red; top: 0;
+            color: white; background: transparent; overflow: hidden;
+            clip: rect(0, 900px, 0, 0); 
+            opacity: 0;
+        }
+        .hero h1.glitching::before {
+            opacity: 1;
+            animation: glitch 0.3s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch {
+            0% { clip-path: inset(40% 0 61% 0); transform: translate(-2px, 2px); }
+            20% { clip-path: inset(92% 0 1% 0); transform: translate(0); }
+            40% { clip-path: inset(43% 0 1% 0); transform: translate(2px, -2px); }
+            60% { clip-path: inset(25% 0 58% 0); transform: translate(2px, 2px); }
+            80% { clip-path: inset(54% 0 7% 0); transform: translate(-1px, 1px); }
+            100% { clip-path: inset(58% 0 43% 0); transform: translate(0); }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--neon-green);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 2rem;
+            background: rgba(0,0,0,0.5);
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--neon-green);
+            display: inline-block;
+        }
+
+        /* SOCIAL LINKS */
+        .social-links-container {
+            display: flex; gap: 20px; justify-content: center; margin-top: 2rem;
+        }
+        .social-btn {
+            font-size: 2rem; color: rgba(255, 255, 255, 0.7); transition: all 0.3s ease;
+            width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(0, 0, 0, 0.3); text-decoration: none;
+            position: relative; overflow: hidden;
+        }
+        .social-btn::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        .social-btn:hover::before { left: 100%; }
+        .social-btn:hover { transform: translateY(-5px) scale(1.1); color: #fff; }
+        .social-btn.github:hover { border-color: #fff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); background: #171515; }
+        .social-btn.linkedin:hover { border-color: #0077b5; box-shadow: 0 0 20px rgba(0, 119, 181, 0.6); background: #0077b5; }
+
+        /* FORCE ICON VISIBILITY */
+        .fab {
+            font-family: "Font Awesome 6 Brands" !important;
+            font-weight: 400;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+
+        /* TIMELINE */
+        .timeline { position: relative; max-width: 1000px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 4px; background: var(--neon-blue); top: 0; bottom: 0; left: 50%; margin-left: -2px; box-shadow: 0 0 15px var(--neon-blue); }
+        .timeline-item { padding: 10px 40px; position: relative; width: 50%; margin-bottom: 30px; }
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; }
+        .timeline-content { padding: 20px 30px; background: rgba(20, 20, 30, 0.8); border: 1px solid var(--neon-purple); border-radius: 6px; transition: 0.3s; box-shadow: 0 0 10px rgba(188, 19, 254, 0.2); }
+        .timeline-content:hover { transform: scale(1.05); box-shadow: 0 0 30px var(--neon-purple); background: #1a1a2e; }
+        .year-badge { display: inline-block; background: var(--neon-green); color: #000; padding: 5px 10px; font-weight: bold; font-family: var(--font-display); margin-bottom: 10px; }
+
+        /* GRIDS */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding-bottom: 4rem; }
+        
+        /* GAMES */
+        .game-hub { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .game-card { background: #0f0f1a; border: 1px solid var(--neon-yellow); border-radius: 10px; overflow: hidden; transition: 0.3s; } 
+        .game-card:hover { transform: scale(1.05); box-shadow: 0 0 25px var(--neon-yellow); }
+        .game-preview { height: 200px; background: #222; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--neon-yellow); }
+
+        /* GALLERY */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .gallery-item { 
+            height: 250px; 
+            border: 2px solid var(--neon-purple); 
+            position: relative; 
+            overflow: hidden; 
+            cursor: none; 
+            background: #000;
+        }
+        .gallery-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            transition: 0.5s; 
+        }
+        .gallery-item:hover img { transform: scale(1.05); filter: brightness(1.2); }
+
+        /* NEON BUTTONS */
+        .btn-neon {
+            padding: 12px 30px;
+            background: transparent;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            cursor: none;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-neon::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+        .btn-neon:hover::before { left: 100%; }
+        .btn-neon:hover { box-shadow: 0 0 15px var(--neon-blue); background: rgba(0, 243, 255, 0.1); }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
+            nav { display: none; } 
+            header { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor"></div>
+
+    <!-- AUDIO ELEMENT -->
+     <audio id="playAudio" autoplay loop muted>
+  <source src="WhatsApp Audio 2025-11-24 at 19.55.45_76e7c693" type="mp3">
+</audio>
+
+    <!-- BACKGROUND PARTICLES -->
+    <canvas id="bg-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></canvas>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">DRJ</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="switchPage('home')" class="active hover-text" data-original="Home">Home</a></li>
+                <li><a href="#" onclick="switchPage('education')" class="hover-text" data-original="Education">Education</a></li>
+                <li><a href="#" onclick="switchPage('skills')" class="hover-text" data-original="Skills & Certs">Skills & Certs</a></li>
+                <li><a href="#" onclick="switchPage('games')" class="hover-text" data-original="Arcade">Arcade</a></li>
+                <li><a href="#" onclick="switchPage('contact')" class="hover-text" data-original="Contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-toggle" style="display:none;"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="home" class="active">
+        <div class="hero">
+            <!-- SYSTEM TEXT -->
+            <div id="ai-status" style="position: absolute; top: 120px; font-size: 0.8rem; color: var(--neon-green); font-family: monospace; text-transform: uppercase; letter-spacing: 2px;">SYSTEM ONLINE...</div>
+
+            <div class="photo-container">
+                <div class="orbit-ring"></div>
+                <div class="photo-frame">
+                    <!-- IMAGE -->
+                    <img src="WhatsApp Image 2025-11-22 at 19.21.39_cb4bc563.jpg" alt="Dhruvrajsinh Dodiya" onerror="this.style.display='none'; this.parentElement.style.backgroundColor='#222'; this.parentElement.innerHTML='<div style=\'color:#fff; text-align:center; margin-top:50%; transform:translateY(-50%)\'>IMAGE NOT FOUND</div>'">
+                </div>
+            </div>
+
+            <!-- ANIMATED NAME -->
+            <h1 id="cyber-name" data-value="DHRUVRAJSINH DODIYA" data-text="DHRUVRAJSINH DODIYA">DHRUVRAJSINH DODIYA</h1>
+            <p id="typewriter"></p>
+            
+             <!-- SOCIAL LINKS -->
+            <div class="social-links-container">
+                <a href="https://github.com/dhruvrajsinhdodiya9" target="_blank" class="social-btn github" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dhruvrajsinh-dodiya-42a2a7374/" target="_blank" class="social-btn linkedin" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. EDUCATION SECTION -->
+    <section id="education">
+        <div class="container">
+            <h2 style="text-align: center; font-family: var(--font-display); font-size: 3rem; margin-bottom: 3rem; color: var(--neon-blue);">ACADEMIC <span style="color:var(--neon-purple)">TIMELINE</span></h2>
+            <div class="timeline">
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="year-badge">PRESENT</span>
+                        <h3>B.Tech CSE (1st Year)</h3>
+                        <p style="color:var(--neon-blue); font-weight:bold;">Chandubhai S Patel Institute of Technology (CSPIT)</p>
+                        <p>Pursuing Computer Science & Engineering. Focusing on Data Structures, Web Dev, and Competitive Programming.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="year-badge">2025</span>
+                        <h3>HSC Science (A Group)</h3>
+                        <p style="color:var(--neon-green); font-weight:bold;">Ultra Vision Academy, Surendranagar</p>
+                        <p>Completed Higher Secondary education with distinction in Mathematics and Physics.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="year-badge">2024</span>
+                        <h3>11th Standard</h3>
+                        <p style="color:var(--neon-yellow); font-weight:bold;">St. Xavier's School Loyola Hall, Ahmedabad</p>
+                        <p>Foundation year in Science stream.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="year-badge">2023</span>
+                        <h3>SSC (10th Board)</h3>
+                        <p style="color:var(--neon-purple); font-weight:bold;">Bachpan High School, Surendranagar</p>
+                        <p>Completed Secondary School Certificate with excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SKILLS & CERTIFICATES SECTION -->
+    <section id="skills">
+        <div class="container">
+            <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 2rem; color: var(--neon-green);">SKILLSET <span style="font-size:1rem;">// LOADED</span></h2>
+            
+            <!-- SKILLS UNAVAILABLE -->
+            <div style="text-align: center; color: var(--neon-green); font-family: monospace; font-size: 1.5rem; margin-bottom: 4rem; border: 1px dashed var(--neon-green); padding: 2rem; background: rgba(10,255,10,0.05); cursor: none;">
+                [STATUS]: CURRENTLY UNAVAILABLE
+            </div>
+
+            <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 2rem; color: var(--neon-yellow);">CERTIFICATES <span style="font-size:1rem;">// VERIFIED</span></h2>
+            <div class="gallery">
+                <div class="gallery-item"><img src="-1.jpg" alt="Certificate 1"></div>
+                <div class="gallery-item"><img src="-2.jpg" alt="Certificate 2"></div>
+                <div class="gallery-item"><img src="-3.jpg" alt="Certificate 3"></div>
+                <div class="gallery-item"><img src="-4.jpg" alt="Certificate 4"></div>
+                <div class="gallery-item"><img src="-5.jpg" alt="Certificate 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. GAMES SECTION -->
+    <section id="games">
+        <div class="container">
+            <h1 style="text-align: center; font-family: var(--font-display); font-size: 4rem; margin-bottom: 1rem; color: #fff;">DRJ <span style="color:var(--neon-purple)">ARCADE</span></h1>
+            <div class="game-hub">
+                
+                <div class="game-card" style="border-color: var(--neon-green);">
+                    <div class="game-preview" style="color:var(--neon-green);"><i class="fas fa-stopwatch"></i></div>
+                    <div style="padding: 20px;">
+                        <h3 style="color:#fff;">REACTION TEST</h3>
+                        <p style="font-size: 0.9rem; color:#888; margin: 10px 0;">Test your reflexes in ms.</p>
+                        <button class="btn-neon" style="width:100%; font-size: 1rem; padding: 10px; border-color:var(--neon-green); color:var(--neon-green);" onclick="openGame('reaction')">LAUNCH</button>
+                    </div>
+                </div>
+                
+                <div class="game-card" style="border-color: var(--neon-blue);">
+                    <div class="game-preview" style="color:var(--neon-blue);"><i class="fas fa-gamepad"></i></div>
+                    <div style="padding: 20px;">
+                        <h3 style="color:#fff;">PONG</h3>
+                        <p style="font-size: 0.9rem; color:#888; margin: 10px 0;">2 Player Classic (W/S & O/L).</p>
+                        <button class="btn-neon" style="width:100%; font-size: 1rem; padding: 10px; border-color:var(--neon-blue); color:var(--neon-blue);" onclick="openGame('pong')">LAUNCH</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact">
+        <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+            <div style="width: 100%; max-width: 600px; background: rgba(10,10,10,0.8); padding: 40px; border: 1px solid var(--neon-blue); border-radius: 10px; box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);">
+                <h2 style="font-family: var(--font-display); margin-bottom: 2rem; color: var(--neon-blue); text-align: center;">ESTABLISH <span style="color:#fff;">UPLINK</span></h2>
+                
+                <div style="text-align: center;">
+                    <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-phone" style="color:var(--neon-green); margin-right: 10px;"></i> 
+                        <span style="color: #fff;">+91 7096231111</span>
+                    </p>
+                    <p style="font-size: 1.2rem; margin-bottom: 2.5rem;">
+                        <i class="fas fa-envelope" style="color:var(--neon-purple); margin-right: 10px;"></i> 
+                        <span style="color: #fff;">dhruvrajsinhdodiya4208@gmail.com</span>
+                    </p>
+                    
+                    <!-- SOCIAL LINKS -->
+                    <div class="social-links-container" style="justify-content: center;">
+                        <a href="https://github.com/dhruvrajsinhdodiya9" target="_blank" class="social-btn github" title="GitHub Profile"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dhruvrajsinh-dodiya-42a2a7374/" target="_blank" class="social-btn linkedin" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME MODAL -->
+    <div id="game-modal" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:2000; display:none; align-items:center; justify-content:center; flex-direction:column;">
+        <button onclick="closeGame()" style="position:absolute; top:20px; right:20px; background:none; border:none; color:white; font-size:2rem; cursor:pointer; z-index:2001;">&times;</button>
+        <div id="game-container" style="background:#000; padding:20px; border:2px solid var(--neon-blue);"></div>
+    </div>
+
+    <script>
+        // --- AUDIO SETUP ---
+        const audio = new Audio('WhatsApp Audio 2025-11-23 at 23.30.01_036ac123.mp3');
+        
+        function playAudio() {
+            audio.currentTime = 0;
+            audio.play().catch(e => console.log("Audio waiting for user interaction"));
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            initCursor();
+            initMatrixRain();
+            initTypewriter();
+            initNameDecode(); // Start name animation immediately on load
+            // Force initial home section visible
+            document.getElementById('home').style.opacity = '1';
+            document.getElementById('home').style.display = 'block';
+        });
+
+        // --- SIMPLE NEON CURSOR ---
+        function initCursor() {
+            const cursor = document.querySelector('.cursor');
+            if(!cursor) return;
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, button, .gallery-item, .game-card').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+            });
+        }
+
+        // --- TEXT SCRAMBLE HOVER EFFECT (FIXED) ---
+        function scrambleText(element) {
+            const originalText = element.dataset.original || element.innerText;
+            // Store original text in data attribute if not present
+            if (!element.dataset.original) element.dataset.original = originalText;
+            
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
+            let iterations = 0;
+            
+            const interval = setInterval(() => {
+                element.innerText = originalText.split('')
+                    .map((char, index) => {
+                        if(index < iterations) return originalText[index];
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join('');
+                
+                if(iterations >= originalText.length) clearInterval(interval);
+                iterations += 1/2;
+            }, 30);
+        }
+
+        document.querySelectorAll('.hover-text').forEach(el => {
+            el.addEventListener('mouseenter', () => scrambleText(el));
+        });
+
+        // --- NAVIGATION (ANIMATED) ---
+        function switchPage(pageId) {
+            // Hide all sections first
+            document.querySelectorAll('section').forEach(sec => {
+                sec.style.display = 'none';
+                sec.style.opacity = '0';
+                sec.classList.remove('active');
+            });
+            
+            const target = document.getElementById(pageId);
+            if(target) {
+                target.style.display = 'block'; 
+                // Tiny timeout to allow display:block to apply before opacity
+                setTimeout(() => {
+                    target.style.opacity = '1';
+                    target.classList.add('active');
+                    // Use GSAP if available for child elements
+                    if (window.gsap) {
+                        gsap.fromTo(target.children, {y: 30, opacity: 0}, {y: 0, opacity: 1, stagger: 0.1, duration: 0.4});
+                    }
+                }, 10);
+
+                // TRIGGER NAME ANIMATION ON EVERY HOME VISIT
+                if (pageId === 'home') {
+                    setTimeout(initNameDecode, 100);
+                }
+            }
+            
+            // Update Nav State
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            window.scrollTo(0,0);
+        }
+
+        // --- REPETITIVE NAME ANIMATION ---
+        let nameInterval;
+        let autoRepeatInterval;
+
+        function initNameDecode() {
+            const nameElement = document.getElementById('cyber-name');
+            if(!nameElement) return;
+            const finalName = nameElement.dataset.value;
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@#$%^&*";
+            
+            function runEffect() {
+                let iterations = 0;
+                if(nameInterval) clearInterval(nameInterval);
+                
+                // Add glitch class for CSS effect
+                nameElement.classList.add('glitching');
+                
+                nameInterval = setInterval(() => {
+                    const currentText = finalName.split("").map((letter, index) => {
+                        if(index < iterations) return finalName[index];
+                        return letters[Math.floor(Math.random() * 26)];
+                    }).join("");
+                    nameElement.innerText = currentText;
+                    nameElement.setAttribute('data-text', currentText);
+                    
+                    if(iterations >= finalName.length) { 
+                        clearInterval(nameInterval);
+                        nameElement.innerText = finalName;
+                        nameElement.setAttribute('data-text', finalName);
+                        nameElement.classList.remove('glitching');
+                    }
+                    iterations += 1/3; 
+                }, 30);
+            }
+
+            // Run immediately
+            runEffect();
+
+            // Setup auto-repeat if not already running
+            if (!autoRepeatInterval) {
+                autoRepeatInterval = setInterval(runEffect, 4000);
+            }
+        }
+
+        // --- TYPEWRITER ---
+        function initTypewriter() {
+            const typeTarget = document.getElementById('typewriter');
+            if (!typeTarget) return;
+            const roles = ["COMPUTER SCIENCE ENGINEER", "VISIONARY", "GAMER", "TECH ENTHUSIAST"];
+            let roleIdx = 0;
+            let charIdx = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentRole = roles[roleIdx];
+                if (isDeleting) {
+                    typeTarget.innerText = currentRole.substring(0, charIdx - 1);
+                    charIdx--;
+                } else {
+                    typeTarget.innerText = currentRole.substring(0, charIdx + 1);
+                    charIdx++;
+                }
+                if (!isDeleting && charIdx === currentRole.length) {
+                    setTimeout(() => isDeleting = true, 2000);
+                } else if (isDeleting && charIdx === 0) {
+                    isDeleting = false;
+                    roleIdx = (roleIdx + 1) % roles.length;
+                    playAudio(); 
+                }
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+            type();
+        }
+
+        // --- MATRIX RAIN BACKGROUND ---
+        function initMatrixRain() {
+            const canvas = document.getElementById('bg-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{}[];:<>/?!@#$%^&*()_+-=|'.split('');
+            const fontSize = 14;
+            const columns = canvas.width/fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+            
+            function draw() {
+                ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#0F0';
+                if(Math.random() > 0.98) ctx.fillStyle = '#00F3FF';
+                ctx.font = fontSize + 'px monospace';
+                for(let i = 0; i < drops.length; i++) {
+                    const text = chars[Math.floor(Math.random()*chars.length)];
+                    ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+                    if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                    drops[i]++;
+                }
+            }
+            setInterval(draw, 33);
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // --- GAME LAUNCHER ---
+        let gameInterval = null;
+        let pongAnimId = null;
+
+        function openGame(gameType) {
+            document.getElementById('game-modal').style.display = 'flex';
+            const container = document.getElementById('game-container');
+            container.innerHTML = '';
+            if(gameInterval) clearInterval(gameInterval);
+            if(pongAnimId) cancelAnimationFrame(pongAnimId);
+
+            if(gameType === 'reaction') startReactionTest(container);
+            else if(gameType === 'pong') startPong(container);
+        }
+        
+        function closeGame() {
+            document.getElementById('game-modal').style.display = 'none';
+            if(gameInterval) clearInterval(gameInterval);
+            if(pongAnimId) cancelAnimationFrame(pongAnimId);
+        }
+
+        function startReactionTest(container) {
+            container.innerHTML = `<h2 style="color:var(--neon-green); text-align:center; margin-bottom:20px;">REACTION TEST</h2><div id="reaction-box" style="width:300px; height:300px; background:#333; display:flex; align-items:center; justify-content:center; cursor:pointer; border-radius:10px;"><span style="color:white; font-size:1.2rem;">Click when GREEN</span></div>`;
+            const box = document.getElementById('reaction-box');
+            let startTime = 0, waiting = true;
+            setTimeout(() => { if(!document.getElementById('reaction-box')) return; box.style.background = 'var(--neon-green)'; box.innerHTML = '<span style="color:black; font-weight:bold;">CLICK!</span>'; startTime = Date.now(); waiting = false; }, 1000 + Math.random() * 3000);
+            box.addEventListener('click', () => { if(waiting) box.innerHTML = '<span style="color:red;">Too Early!</span>'; else { const time = Date.now() - startTime; box.style.background = 'var(--neon-blue)'; box.innerHTML = `<span style="color:black; font-weight:bold;">${time} ms</span>`; } });
+        }
+
+        /* --- PONG: 2-PLAYER KEYBOARD VERSION (W/S and O/L) --- */
+        function startPong(container) {
+            container.innerHTML = `<h2 style="color:var(--neon-blue); text-align:center;">PONG (2P)</h2>
+            <div style="text-align:center; color:#fff; font-family:'Orbitron'; font-size:1.2rem; margin-bottom:10px;"><span id="scoreL">0</span> - <span id="scoreR">0</span></div>
+            <canvas id="pong-game" width="600" height="400" style="background:#000; border:1px solid #fff; display:block; margin:0 auto;"></canvas>
+            <p id="pong-status" style="color:#888; text-align:center; margin-top:10px;">Left: W/S | Right: O/L | First to 10 Wins</p>`;
+            
+            const canvas = document.getElementById('pong-game'), ctx = canvas.getContext('2d');
+            const scoreLEl = document.getElementById('scoreL');
+            const scoreREl = document.getElementById('scoreR');
+            const statusEl = document.getElementById('pong-status');
+            
+            // Game State
+            let ball = {x:300, y:200, dx:3, dy:3, r:5};
+            let padL = {h:80, w:10, y:160};
+            let padR = {h:80, w:10, y:160};
+            let keys = {};
+            let scoreL = 0, scoreR = 0, isGameOver = false;
+
+            function keyDown(e) { keys[e.key.toLowerCase()] = true; }
+            function keyUp(e) { keys[e.key.toLowerCase()] = false; }
+            window.addEventListener('keydown', keyDown);
+            window.addEventListener('keyup', keyUp);
+
+            function update() {
+                if (isGameOver) return;
+
+                // Controls
+                if (keys['w'] && padL.y > 0) padL.y -= 5;
+                if (keys['s'] && padL.y < canvas.height - padL.h) padL.y += 5;
+                if (keys['o'] && padR.y > 0) padR.y -= 5;
+                if (keys['l'] && padR.y < canvas.height - padR.h) padR.y += 5;
+
+                // Ball Movement
+                ball.x += ball.dx; 
+                ball.y += ball.dy;
+
+                // Wall Collision
+                if(ball.y + ball.r > canvas.height || ball.y - ball.r < 0) ball.dy *= -1;
+
+                // Paddle Collision
+                if(ball.x - ball.r < padL.w && ball.y > padL.y && ball.y < padL.y + padL.h) {
+                    ball.dx *= -1; ball.x = padL.w + ball.r;
+                }
+                if(ball.x + ball.r > canvas.width - padR.w && ball.y > padR.y && ball.y < padR.y + padR.h) {
+                    ball.dx *= -1; ball.x = canvas.width - padR.w - ball.r;
+                }
+
+                // Scoring
+                if(ball.x < 0) { 
+                    scoreR++; scoreREl.innerText = scoreR; ball.x = 300; ball.y = 200; ball.dx = -ball.dx;
+                } else if(ball.x > canvas.width) { 
+                    scoreL++; scoreLEl.innerText = scoreL; ball.x = 300; ball.y = 200; ball.dx = -ball.dx;
+                }
+                
+                // Check Win
+                if (scoreL >= 10 || scoreR >= 10) {
+                    isGameOver = true;
+                    statusEl.innerText = scoreL >= 10 ? "LEFT PLAYER WINS!" : "RIGHT PLAYER WINS!";
+                    statusEl.style.color = "var(--neon-green)";
+                    cancelAnimationFrame(pongAnimId);
+                    return;
+                }
+                
+                // Draw
+                ctx.fillStyle = 'black'; ctx.fillRect(0,0,canvas.width,canvas.height);
+                ctx.fillStyle = '#00f3ff'; ctx.fillRect(0, padL.y, padL.w, padL.h);
+                ctx.fillStyle = '#bc13fe'; ctx.fillRect(canvas.width - padR.w, padR.y, padR.w, padR.h);
+                ctx.beginPath(); ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI*2); ctx.fillStyle = 'white'; ctx.fill();
+                ctx.strokeStyle = '#333'; ctx.beginPath(); ctx.setLineDash([5, 15]); ctx.moveTo(300, 0); ctx.lineTo(300, 400); ctx.stroke();
+
+                pongAnimId = requestAnimationFrame(update);
+            }
+            update();
+            
+            const closeModalBtn = document.querySelector('#game-modal button');
+            closeModalBtn.onclick = () => {
+                window.removeEventListener('keydown', keyDown);
+                window.removeEventListener('keyup', keyUp);
+                closeGame();
+            };
+        }
+
+        function initGSAP() {
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+                gsap.utils.toArray('.timeline-item').forEach((item, i) => { 
+                    gsap.from(item, { 
+                        scrollTrigger: { trigger: item, start: "top 80%" }, 
+                        x: i % 2 === 0 ? -100 : 100, 
+                        opacity: 0, 
+                        duration: 1, 
+                        ease: "power2.out" 
+                    }); 
+                });
+                gsap.from('.card-hacker', { 
+                    scrollTrigger: { trigger: '.grid-container', start: "top 70%" }, 
+                    y: 50, opacity: 0, stagger: 0.2, duration: 0.8, ease: "power2.out" 
+                });
+                gsap.from('.gallery-item', {
+                    scrollTrigger: { trigger: '.gallery', start: "top 70%" },
+                    opacity: 0, scale: 0.8, stagger: 0.1, duration: 0.8, ease: "back.out(1.7)"
+                });
+                gsap.to(".photo-container", {
+                    y: -20, duration: 3, ease: "sine.inOut", repeat: -1, yoyo: true
+                });
+            }
+        }
+    </script>
+</body>
+</html>
