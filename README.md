@@ -1,9 +1,9 @@
 [![MasterHead](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/22b22287602523.5dbd29081561d.gif)](https://www.youtube.com/@cinematicsbysabieh)
-
-<h1 align="center"> Hello, <img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" 
-         alt="Waving hand animated gif"
-         height="45"
-         width="45" /> I'm Dhruvrajsinh Dodiya </h1>
+<h1 align="center">
+         
+## [](#--gifs-for-readme--)   
+<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/9be4d344-6782-461a-b5a6-32a07bf7b34e" width="200" alt="animated hello">
+<img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" alt="Waving hand animated gif"height="45"width="45" /> I'm Dhruvrajsinh Dodiya </h1>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=dhruvrajsinhdodiya9&label=Views&color=blue&style=plastic&style=for-the-badge" alt="dhruvrajsinhdodiya9" /> </p>
 <img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/e8/f4/53/e8f453469a3ec97ecd354df465d73913.gif">
