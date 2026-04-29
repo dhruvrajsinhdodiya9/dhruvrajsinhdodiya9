@@ -4,9 +4,10 @@
          alt="Waving hand animated gif"
          height="45"
          width="45" /> I'm Dhruvrajsinh Dodiya</h1>
-         
-         
+
+ 
 <img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/e8/f4/53/e8f453469a3ec97ecd354df465d73913.gif">
+
 
 
 **A Computer Science Student || WebDev**
