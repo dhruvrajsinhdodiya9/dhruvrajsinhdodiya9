@@ -1,11 +1,13 @@
 [![MasterHead](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/22b22287602523.5dbd29081561d.gif)](https://www.youtube.com/@cinematicsbysabieh)
 <h1 align="center">
          
-## [](#--gifs-for-readme--)   
-<img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/9be4d344-6782-461a-b5a6-32a07bf7b34e" width="200" alt="animated hello">
-<img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" alt="Waving hand animated gif"height="45"width="45" /> I'm Dhruvrajsinh Dodiya </h1>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=dhruvrajsinhdodiya9&label=Views&color=blue&style=plastic&style=for-the-badge" alt="dhruvrajsinhdodiya9" /> </p>
+<p align="center">
+  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/9be4d344-6782-461a-b5a6-32a07bf7b34e" width="130" style="vertical-align: middle;" />
+  
+  <img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" width="38" style="vertical-align: middle;" />
+  
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=24&pause=1500&color=E5E7EB&vCenter=true&width=520&lines=I'm+Dhruvrajsinh+Dodiya" style="vertical-align: middle;" />
+</p></h1>
 <img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/e8/f4/53/e8f453469a3ec97ecd354df465d73913.gif">
 
 # 💫 About Me :
