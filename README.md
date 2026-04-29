@@ -18,13 +18,7 @@
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=dhruvrajsinhdodiya9&limit=5&theme=tokyonight&combine_all_yearly_contributions=true)
 
----
-[![]
 
-
-
-
-(https://komarev.com/ghpvc/?username=dhruvrajsinhdodiya9&icon=6&color=4)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->https://dhruvrajsinhdodiya9.github.io/dhruvrajsinhdodiya9/
 
