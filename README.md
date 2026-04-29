@@ -28,9 +28,14 @@
 
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=dhruvrajsinhdodiya9&theme=highcontrast&hide_border=false&include_all_commits=true&count_private=false)<br/>
-![](https://streak-stats.demolab.com/?user=dhruvrajsinhdodiya9&theme=highcontrast&hide_border=false)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=dhruvrajsinhdodiya9&theme=highcontrast&hide_border=false&include_all_commits=true&count_private=false&layout=compact)
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=dhruvrajsinhdodiya9&theme=highcontrast&hide_border=false&include_all_commits=true&count_private=false" />
+  <br/>
+  <img src="https://streak-stats.demolab.com?user=dhruvrajsinhdodiya9&theme=highcontrast&hide_border=false" />
+  <br/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=dhruvrajsinhdodiya9&theme=highcontrast&hide_border=false&include_all_commits=true&count_private=false&layout=compact" />
+</p>
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=dhruvrajsinhdodiya9&theme=dracula&no-frame=false&no-bg=true&margin-w=4)
