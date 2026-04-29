@@ -3,18 +3,16 @@
 <h1 align="center"> Hello, <img src="https://raw.githubusercontent.com/nixin72/nixin72/master/wave.gif" 
          alt="Waving hand animated gif"
          height="45"
-         width="45" /> I'm Dhruvrajsinh Dodiya</h1>
+         width="45" /> I'm Dhruvrajsinh Dodiya </h1>
 
- 
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=dhruvrajsinhdodiya9&label=Views&color=blue&style=plastic&style=for-the-badge" alt="dhruvrajsinhdodiya9" /> </p>
 <img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/e8/f4/53/e8f453469a3ec97ecd354df465d73913.gif">
 
-
-
-**A Computer Science Student || WebDev**
-
-- 🔭 **I’m currently working on:** My Portfolio
-- 🌱 **I’m currently learning:** Object Oriented Programming 
-- 📫 **How to reach me:** dhruvrajsinhdodiya4208@gmail.com
+# 💫 About Me :
+- 🔭 *I’m A Computer Science Student and WebDev*.
+- 🌱 *I’m currently learning more about object oriented programming and javascript*.
+- 😁 *Right now I'm working on my portfolio*.
+- 📫 *How to reach me: Check social links below*.
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/dhruvrajsinhdodiya_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dhruvrajsinhdodiya9) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/@Dhruvraj4208) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@www.youtube.com/@dhruvrajsinhdodiya_9) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:dhruvrajsinhdodiya4208@gmail.com) 
