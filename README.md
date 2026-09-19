@@ -147,8 +147,8 @@ CSPIT CHARUSAT · 2025
 
 <h3>Personal Portfolio Website</h3>
 
-Responsive personal portfolio showcasing my projects, technical skills,
-achievements, and experience.
+A personal space currently being built to showcase my projects,
+technical journey, achievements, and experiments.
 
 <br><br>
 
@@ -156,9 +156,7 @@ achievements, and experience.
 
 <br><br>
 
-<a href="https://dhruvrajsinhdodiya9.github.io/dhruvrajsinhdodiya9/">
-  <img src="https://img.shields.io/badge/VIEW%20PORTFOLIO-00AEEF?style=for-the-badge&logo=googlechrome&logoColor=white">
-</a>
+<img src="https://img.shields.io/badge/STATUS-BUILDING-FFA500?style=for-the-badge&logo=code&logoColor=white">
 
 </td>
 </tr>
