@@ -101,7 +101,7 @@ developer, problem solver, and creator.
 <br><br>
 <sub>Participant</sub>
 <br>
-<code>SIH · 2026</code>
+<code>SIH · 2025</code>
 </td>
 
 <td align="center" width="25%">
