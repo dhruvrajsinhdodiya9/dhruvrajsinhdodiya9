@@ -83,57 +83,41 @@ developer, problem solver, and creator.
 ![Premiere Pro](https://img.shields.io/badge/Premiere_Pro-%239999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)
 ![Lightroom](https://img.shields.io/badge/Lightroom-%2331A8FF?style=for-the-badge&logo=adobelightroom&logoColor=white)
 
-## 🏆 Events & Participation
+<h2>🏆 Events & Participation</h2>
 
 <table>
 <tr>
 
 <td align="center" width="25%">
-
-<h3>Adobe University<br>Hackathon</h3>
-
-<b>Participant</b>
-
+<b>Adobe University Hackathon</b>
 <br><br>
-
-Adobe · 2026
-
+<sub>Participant</sub>
+<br>
+<code>Adobe · 2026</code>
 </td>
 
 <td align="center" width="25%">
-
-<h3>Smart India<br>Hackathon</h3>
-
-<b>Participant</b>
-
+<b>Smart India Hackathon</b>
 <br><br>
-
-SIH · 2026
-
+<sub>Participant</sub>
+<br>
+<code>SIH · 2026</code>
 </td>
 
 <td align="center" width="25%">
-
-<h3>Spark Tank<br>2025</h3>
-
-<b>Pitching Competition</b>
-
+<b>Spark Tank 2025</b>
 <br><br>
-
-E-Cell CHARUSAT · 2025
-
+<sub>Pitching Competition</sub>
+<br>
+<code>E-Cell CHARUSAT · 2025</code>
 </td>
 
 <td align="center" width="25%">
-
-<h3>Track Trace</h3>
-
-<b>Participant</b>
-
+<b>Track Trace</b>
 <br><br>
-
-CSPIT CHARUSAT · 2025
-
+<sub>Participant</sub>
+<br>
+<code>CSPIT CHARUSAT · 2025</code>
 </td>
 
 </tr>
@@ -152,7 +136,7 @@ technical journey, achievements, and experiments.
 
 <br><br>
 
-<b>HTML · CSS · JavaScript</b>
+<b>HTML · CSS · JavaScript · TypeScript · React · Next.js · Node.js</b>
 
 <br><br>
 
