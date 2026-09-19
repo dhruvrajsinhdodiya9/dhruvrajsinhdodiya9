@@ -10,9 +10,36 @@
 </p></h1>
 <img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/e8/f4/53/e8f453469a3ec97ecd354df465d73913.gif">
 
-## 💫 About Me
+<h2>💫 About Me</h2>
 
-I’m **Dhruvrajsinh Dodiya**, a Computer Science & Engineering student at **CSPIT, CHARUSAT**, passionate about building practical solutions and exploring how technology can turn ideas into reality. I enjoy learning through hands-on projects, experimenting with new technologies, and solving problems that challenge me to think differently. Beyond development, I’m also interested in **UI/UX**, **creative design**, and **3D**, with a constant focus on improving both my technical and creative skills. I believe in a simple approach: <b>Learn → Build → Experiment → Improve</b> — and I’m always looking for the next idea worth building.
+<p>
+I’m <b>Dhruvrajsinh Dodiya</b>, a Computer Science & Engineering student at
+<b>CSPIT, CHARUSAT</b>, driven by curiosity, creativity, and the desire to
+turn ideas into something real.
+</p>
+
+<p>
+I enjoy building things from scratch, experimenting with new technologies,
+breaking things just to understand how they work, and turning every
+challenge into an opportunity to learn something new.
+</p>
+
+<p>
+For me, coding is more than writing lines of code — it’s about
+<b>thinking differently, solving problems, and creating experiences</b>
+that people can actually use. I’m constantly pushing myself to go beyond
+the obvious and build something better than what I started with.
+</p>
+
+<p>
+I believe the best way to learn is to <b>build, fail, debug, rebuild, and
+keep going</b>. Every project is another step toward becoming a better
+developer, problem solver, and creator.
+</p>
+
+<p>
+<i>Learn → Build → Experiment → Break → Fix → Improve.</i>
+</p>
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/dhruvrajsinhdodiya_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dhruvrajsinhdodiya9) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/@Dhruvraj4208) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@www.youtube.com/@dhruvrajsinhdodiya_9) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:dhruvrajsinhdodiya4208@gmail.com) 
@@ -56,52 +83,31 @@ I’m **Dhruvrajsinh Dodiya**, a Computer Science & Engineering student at **CSP
 ![Premiere Pro](https://img.shields.io/badge/Premiere_Pro-%239999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)
 ![Lightroom](https://img.shields.io/badge/Lightroom-%2331A8FF?style=for-the-badge&logo=adobelightroom&logoColor=white)
 
-<h2>🏆 Events & Participation</h2>
+<h2>💫 About Me</h2>
 
-<table>
-<tr>
-<td align="center" width="25%">
+<p>
+I’m <b>Dhruvrajsinh Dodiya</b>, a Computer Science & Engineering student at
+<b>CSPIT, CHARUSAT</b>, passionate about building practical solutions and
+exploring new technologies.
+</p>
 
-### Adobe University Hackathon
+<p>
+My interests include <b>Web Development</b>, <b>Backend Development</b>,
+<b>Cloud Computing</b>, <b>DevOps</b>, <b>Artificial Intelligence</b>,
+<b>Cybersecurity</b>, and <b>Embedded Systems</b>. I enjoy turning ideas
+into projects, experimenting with new technologies, and solving problems
+through hands-on development.
+</p>
 
-**Participant**
+<p>
+Beyond coding, I’m interested in <b>UI/UX</b>, <b>creative design</b>, and
+<b>3D</b>. I’m continuously working on improving my technical skills,
+building meaningful projects, and learning something new with every build.
+</p>
 
-Adobe · 2026
-
-</td>
-
-<td align="center" width="25%">
-
-### Smart India Hackathon
-
-**Participant**
-
-SIH · 2026
-
-</td>
-
-<td align="center" width="25%">
-
-### Spark Tank 2025
-
-**Pitching Competition**
-
-E-Cell CHARUSAT · 2025
-
-</td>
-
-<td align="center" width="25%">
-
-### Track Trace
-
-**Participant**
-
-CSPIT CHARUSAT · 2025
-
-</td>
-</tr>
-</table>
-
+<p>
+<i>Learn → Build → Experiment → Improve.</i>
+</p>
 
 # 📊 GitHub Stats:
 
