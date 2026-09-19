@@ -83,31 +83,86 @@ developer, problem solver, and creator.
 ![Premiere Pro](https://img.shields.io/badge/Premiere_Pro-%239999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)
 ![Lightroom](https://img.shields.io/badge/Lightroom-%2331A8FF?style=for-the-badge&logo=adobelightroom&logoColor=white)
 
-<h2>💫 About Me</h2>
+## 🏆 Events & Participation
 
-<p>
-I’m <b>Dhruvrajsinh Dodiya</b>, a Computer Science & Engineering student at
-<b>CSPIT, CHARUSAT</b>, passionate about building practical solutions and
-exploring new technologies.
-</p>
+<table>
+<tr>
 
-<p>
-My interests include <b>Web Development</b>, <b>Backend Development</b>,
-<b>Cloud Computing</b>, <b>DevOps</b>, <b>Artificial Intelligence</b>,
-<b>Cybersecurity</b>, and <b>Embedded Systems</b>. I enjoy turning ideas
-into projects, experimenting with new technologies, and solving problems
-through hands-on development.
-</p>
+<td align="center" width="25%">
 
-<p>
-Beyond coding, I’m interested in <b>UI/UX</b>, <b>creative design</b>, and
-<b>3D</b>. I’m continuously working on improving my technical skills,
-building meaningful projects, and learning something new with every build.
-</p>
+<h3>Adobe University<br>Hackathon</h3>
 
-<p>
-<i>Learn → Build → Experiment → Improve.</i>
-</p>
+<b>Participant</b>
+
+<br><br>
+
+Adobe · 2026
+
+</td>
+
+<td align="center" width="25%">
+
+<h3>Smart India<br>Hackathon</h3>
+
+<b>Participant</b>
+
+<br><br>
+
+SIH · 2026
+
+</td>
+
+<td align="center" width="25%">
+
+<h3>Spark Tank<br>2025</h3>
+
+<b>Pitching Competition</b>
+
+<br><br>
+
+E-Cell CHARUSAT · 2025
+
+</td>
+
+<td align="center" width="25%">
+
+<h3>Track Trace</h3>
+
+<b>Participant</b>
+
+<br><br>
+
+CSPIT CHARUSAT · 2025
+
+</td>
+
+</tr>
+</table>
+
+## 💻 Featured Project
+
+<table>
+<tr>
+<td align="center">
+
+<h3>Personal Portfolio Website</h3>
+
+Responsive personal portfolio showcasing my projects, technical skills,
+achievements, and experience.
+
+<br><br>
+
+<b>HTML · CSS · JavaScript</b>
+
+<br><br>
+
+<a href="https://dhruvrajsinhdodiya9.github.io/dhruvrajsinhdodiya9/">
+  <img src="https://img.shields.io/badge/VIEW%20PORTFOLIO-00AEEF?style=for-the-badge&logo=googlechrome&logoColor=white">
+</a>
+
+</td>
+</tr>
+</table>
 
 # 📊 GitHub Stats:
 
