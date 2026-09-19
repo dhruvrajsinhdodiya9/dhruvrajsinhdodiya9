@@ -10,11 +10,9 @@
 </p></h1>
 <img align="right" alt="Coding" width="400" src="https://i.pinimg.com/originals/e8/f4/53/e8f453469a3ec97ecd354df465d73913.gif">
 
-# 💫 About Me :
-- 🔭 *I’m A Computer Science Student and WebDev*.
-- 🌱 *I’m currently learning more about object oriented programming and javascript*.
-- 😁 *Right now I'm working on my portfolio*.
-- 📫 *How to reach me: Check social links below*.
+## 💫 About Me
+
+I’m **Dhruvrajsinh Dodiya**, a Computer Science & Engineering student at **CSPIT, CHARUSAT**, passionate about building practical solutions and exploring how technology can turn ideas into reality. I enjoy learning through hands-on projects, experimenting with new technologies, and solving problems that challenge me to think differently. Beyond development, I’m also interested in **UI/UX**, **creative design**, and **3D**, with a constant focus on improving both my technical and creative skills. I believe in a simple approach: <b>Learn → Build → Experiment → Improve</b> — and I’m always looking for the next idea worth building.
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/dhruvrajsinhdodiya_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/dhruvrajsinhdodiya9) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/@Dhruvraj4208) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@www.youtube.com/@dhruvrajsinhdodiya_9) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:dhruvrajsinhdodiya4208@gmail.com) 
@@ -48,7 +46,7 @@
 ![GitLab CI](https://img.shields.io/badge/GitLab_CI-%23FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
 ![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-%234D4D4D?style=for-the-badge&logo=windowsterminal&logoColor=white)
 
-####🎨Design & Creative
+#### 🎨 Design & Creative
 ![Figma](https://img.shields.io/badge/Figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 ![Canva](https://img.shields.io/badge/Canva-%2300C4CC?style=for-the-badge&logo=canva&logoColor=white)
 ![Blender](https://img.shields.io/badge/Blender-%23E87D0D?style=for-the-badge&logo=blender&logoColor=white)
@@ -57,6 +55,52 @@
 ![After Effects](https://img.shields.io/badge/After_Effects-%239999FF?style=for-the-badge&logo=adobeaftereffects&logoColor=white)
 ![Premiere Pro](https://img.shields.io/badge/Premiere_Pro-%239999FF?style=for-the-badge&logo=adobepremierepro&logoColor=white)
 ![Lightroom](https://img.shields.io/badge/Lightroom-%2331A8FF?style=for-the-badge&logo=adobelightroom&logoColor=white)
+
+<h2>🏆 Events & Participation</h2>
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+### Adobe University Hackathon
+
+**Participant**
+
+Adobe · 2026
+
+</td>
+
+<td align="center" width="25%">
+
+### Smart India Hackathon
+
+**Participant**
+
+SIH · 2026
+
+</td>
+
+<td align="center" width="25%">
+
+### Spark Tank 2025
+
+**Pitching Competition**
+
+E-Cell CHARUSAT · 2025
+
+</td>
+
+<td align="center" width="25%">
+
+### Track Trace
+
+**Participant**
+
+CSPIT CHARUSAT · 2025
+
+</td>
+</tr>
+</table>
 
 
 # 📊 GitHub Stats:
