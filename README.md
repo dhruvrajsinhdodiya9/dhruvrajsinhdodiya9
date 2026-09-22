@@ -25,7 +25,7 @@ challenge into an opportunity to learn something new.
 </p>
 
 <p>
-For me, coding is more than writing lines of code — it’s about
+For me, coding is more than writing lines of code , it’s about
 <b>thinking differently, solving problems, and creating experiences</b>
 that people can actually use. I’m constantly pushing myself to go beyond
 the obvious and build something better than what I started with.
